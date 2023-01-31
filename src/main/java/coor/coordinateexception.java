@@ -2,7 +2,7 @@ package coor;
 import java.util.*;
 import java.util.logging.Logger;
 import java.util.logging.*;
-class Coordinate implements Cloneable
+class Coordinate implements cloneable
 {
         private double x;
         private double y;
@@ -23,9 +23,9 @@ class Coordinate implements Cloneable
 
                return x0.equals(x11) && y0.equals(y11);
         }
-        public Object clone() throws CloneNotSupportedException
+        public Object cloning() throws CloneNotSupportedException
         {
-                return super.clone();
+                return super.cloning();
         }
         public static void main(String [] args) throws CloneNotSupportedException
         {
@@ -38,7 +38,7 @@ class Coordinate implements Cloneable
                 l.info("Enter y1 coordinate\n");
                 double y=sin.nextDouble();
                 Coordinate c=new Coordinate(x,y);
-                Coordinate c1=(Coordinate)c.clone();
+                Coordinate c1=(Coordinate)c.cloning();
                 l.info("Enter x2 and y2 coordinates\n");
                 double x1=sin.nextDouble();
                 double y1=sin.nextDouble();
