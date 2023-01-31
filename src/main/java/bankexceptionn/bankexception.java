@@ -82,28 +82,14 @@ class Bank
                                         break;
                                 case 3:l.info("Enter the amount to be withdrawl\n");
                                        amount=sin.nextDouble();
-									   	try{
-											if(b.balance()>amount && amount>100)
-											{			
-                                     
-                                             b.withDraw(amount);
-                                                l.log(Level.INFO, () ->"Your current balance is... "+b.balance());
-											}
-												else{
-														throw new MyException("Amount cant be withdrawl");
-
-													}
-											}
-											catch(MyException e){	
-											l.log(Level.INFO,()-> "Error occur: "+e);
-												}		
-                                       
-                                        break;
+                                        b.withDraw(amount);
+                                        l.log(Level.INFO, () ->"Your current balance is... "+b.balance());									
+                                                    break;
                                 case 4:res=b.balance();
-									   l.log(Level.INFO, () ->"Balance is... "+res);
+					l.log(Level.INFO, () ->"Balance is... "+res);
                                        break;
-								case 5:l.info("Thank you");
-									   break;
+				case 5:l.info("Thank you");
+					 break;
                                 default:l.info("Enter valid input");
                                         break;
                         }
