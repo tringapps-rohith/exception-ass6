@@ -2,7 +2,7 @@ package credit;
 import java.util.*;
 import java.util.logging.Logger;
 import java.util.logging.*;
-class Credit implements Cloneable
+class Credit implements cloneable
 {
         private String name;
         private long no;
@@ -22,9 +22,9 @@ class Credit implements Cloneable
 				String no01=no1+"";
                 return no0.equals(no01);
         }
-        public Object clone() throws CloneNotSupportedException
+        public Object cloning() throws CloneNotSupportedException
         {
-                return super.clone();
+                return super.cloning();
         }
         public static void main(String [] args) throws CloneNotSupportedException
         {
@@ -38,7 +38,7 @@ class Credit implements Cloneable
                 l.info("Enter expiry date\n");
                 String expdate=sin.next();
                 Credit c=new Credit(name,no,expdate);
-                Credit c1=(Credit)c.clone();
+                Credit c1=(Credit)c.cloning();
                 l.info("Enter the card no to check by equals method\n");
                 long no1=sin.nextLong();
                 l.log(Level.INFO,()-> Boolean.toString(c1.equals(no1)));
