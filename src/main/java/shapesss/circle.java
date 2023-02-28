@@ -1,4 +1,4 @@
-package shapess
+package shapesss;
 class Circle implements Shape
 {
         private double r;
