@@ -1,3 +1,4 @@
+package shapesss;
 interface Shape
 {
         double perimeter();
